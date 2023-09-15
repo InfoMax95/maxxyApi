@@ -17,6 +17,7 @@ namespace maxxyAPI.Helpers
                     .ForMember(dest => dest.CategoryId, opt => opt.MapFrom(src => src.CategoryId))
                     .ForMember(dest => dest.UserId, opt => opt.MapFrom(src => src.UserId)); ;
                 CreateMap<ImageDto, Image>();
+                CreateMap<Image, ImageDto>();
             }
         }
     }

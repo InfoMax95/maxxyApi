@@ -12,6 +12,7 @@ namespace maxxyAPI.Data
 
         public DbSet<Post> Posts { get; set; }
         public DbSet<Category> Categories { get; set; }
+        public DbSet<Image> Images { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -43,6 +44,7 @@ namespace maxxyAPI.Data
                 .HasMany(_ => _.Codes)
                 .WithOne(c => c.Post)
                 .HasForeignKey(p => p.PostId);
+
         }
     }
 }

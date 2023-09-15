@@ -168,7 +168,7 @@ namespace maxxyAPI.Data.Migrations
                     b.HasIndex("PostId")
                         .IsUnique();
 
-                    b.ToTable("Image");
+                    b.ToTable("Images");
                 });
 
             modelBuilder.Entity("maxxyAPI.Entities.Post", b =>
@@ -436,8 +436,7 @@ namespace maxxyAPI.Data.Migrations
                 {
                     b.Navigation("Codes");
 
-                    b.Navigation("Image")
-                        .IsRequired();
+                    b.Navigation("Image");
                 });
 
             modelBuilder.Entity("maxxyAPI.Entities.Role", b =>

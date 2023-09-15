@@ -10,7 +10,6 @@ namespace maxxyAPI.DTOs
         public string SecondContent { get; set; } = string.Empty;
         public string ThirdContent { get; set; } = string.Empty;
         public List<Code> Codes { get; set; } = new List<Code>();
-        public Image Image { get; set; } = new Image();
         public string Subtitle { get; set; } = string.Empty;
         public string Description { get; set; } = string.Empty;
         public int CategoryId { get; set; }

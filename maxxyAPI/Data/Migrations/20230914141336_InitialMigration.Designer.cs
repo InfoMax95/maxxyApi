@@ -11,7 +11,7 @@ using maxxyAPI.Data;
 namespace maxxyAPI.Data.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20230912142605_InitialMigration")]
+    [Migration("20230914141336_InitialMigration")]
     partial class InitialMigration
     {
         /// <inheritdoc />
@@ -171,7 +171,7 @@ namespace maxxyAPI.Data.Migrations
                     b.HasIndex("PostId")
                         .IsUnique();
 
-                    b.ToTable("Image");
+                    b.ToTable("Images");
                 });
 
             modelBuilder.Entity("maxxyAPI.Entities.Post", b =>
@@ -439,8 +439,7 @@ namespace maxxyAPI.Data.Migrations
                 {
                     b.Navigation("Codes");
 
-                    b.Navigation("Image")
-                        .IsRequired();
+                    b.Navigation("Image");
                 });
 
             modelBuilder.Entity("maxxyAPI.Entities.Role", b =>
